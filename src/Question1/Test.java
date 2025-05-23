@@ -23,7 +23,7 @@ class Stack{
 	protected String popAll() {
 		String returnString = "";
 		while(First != null) {
-			returnString = First.Item + returnString;
+			returnString = First.Item + " " + returnString;
 			First = First.Next;
 		}
 		return returnString;
@@ -41,11 +41,14 @@ public class Test{
 		Scanner input = new Scanner(System.in);
 		String equation = input.nextLine();
 		for(int i = 0; i < equation.length(); i++) {
+			if (equation.charAt(i) == ' ') {
+				continue;
+			}
 			if(equation.charAt(i) == ')') {
 				String right = stack.pop();
 				String op = stack.pop();
 				String left = stack.pop();
-				stack.push("(" + left + op + right + ")");
+				stack.push("(" + " " + left + " " + op  + " "+ right + " " + ")");
 			}
 			else {
 				stack.push(String.valueOf(equation.charAt(i)));
