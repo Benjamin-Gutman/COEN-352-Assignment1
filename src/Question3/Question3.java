@@ -1,36 +1,41 @@
-package Question2;
+package Question3;
 
-public class Question2{
+
+
+public class Question3{
 	
-	public static void main(String[] args) {
-		LinkedList Test = new LinkedList();
-		Test.addToFront(1);
-		Test.addToRear(2);
-		Test.addToRear(3);
-		Test.addToRear(4);
-		Test.addToRear(5);
-		Test.addToRear(6);
-		Test.DeleteRange(2,4);
-		System.out.println("Test 1:");
-		Test.printList();
-		Test.DeleteRange(1,2);
-		System.out.println("Test 2:");
-		Test.printList();
-		
+	public int max(Node first) {
+		int max = 0;
+		while(first != null) {
+			if (first.Data > max) {
+				max = first.Data;
+			}
+			first = first.Next;
+		}
+		return max;
 	}
 	
-}
+	
+	public static void main(String[] args) {
+		LinkedList linked = new LinkedList();
+		Question3 testMax = new Question3();
+		linked.addToRear(23);
+		linked.addToRear(26);
+		linked.addToRear(2);
+		linked.addToRear(56);
+		linked.addToRear(2113);
+		linked.addToRear(3);
+		int max = testMax.max(linked.First);
+		System.out.println(max);
 
+	}
+}
 
 class LinkedList{
 	Node First;
 	Node Rear;
 	int Size = 0;
 	
-	private class Node{
-		int Data;
-		Node Next;
-	}
 	
 	void addToFront(int newFront) {
 		Node temp = new Node();
@@ -101,13 +106,7 @@ class LinkedList{
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
+class Node{
+	int Data;
+	Node Next;
+}
