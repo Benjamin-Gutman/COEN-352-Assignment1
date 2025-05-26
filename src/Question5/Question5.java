@@ -2,9 +2,9 @@ package Question5;
 
 public class Question5{
 	public static void main(String[] args) {
-		int[] arr = {1,2,9,10,6,3,2};
+		int[] arr = {1,2,3,4,5,4,3,2};
 		Question5 asdf = new Question5();
-		boolean found = asdf.BitonicSearch(arr, 9);
+		boolean found = asdf.BitonicSearch(arr, 6);
 		System.out.println(found);
 	}
 	

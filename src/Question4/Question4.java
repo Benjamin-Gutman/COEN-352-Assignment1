@@ -17,6 +17,7 @@ class josephusQueue{
 		Node Next;
 	}
 	
+	
 	void createList(int n) {
 		for (int i = 0; i<n; i++) {
 			Node temp = new Node();
