@@ -18,7 +18,6 @@ public class Question2{
 		Test.printList();
 		
 	}
-	
 }
 
 
@@ -83,14 +82,14 @@ class LinkedList{
 		}
 		
 		Node temp = First;
-		for (int i = 1; i <start-1; i++) {
+		for (int i = 0; i <start-1; i++) {
 			temp = temp.Next;
 		}
 		Node temp2 = First;
-		for (int i = 1; i <=end; i++) {
+		for (int i = 0; i <=end; i++) {
 			temp2 = temp2.Next;
 		}
-		if(start == 1) {
+		if(start == 0) {
 			First = temp2;
 		}
 		else {
